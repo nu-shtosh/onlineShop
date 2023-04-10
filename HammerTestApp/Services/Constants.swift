@@ -10,7 +10,6 @@ import Foundation
 /// Ссылки
 enum Link: String {
     case fakeDataProducts = "https://fakestoreapi.com/products"
-    case fakeDataImage = "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
 }
 
 /// Ошибки связанные с сетью

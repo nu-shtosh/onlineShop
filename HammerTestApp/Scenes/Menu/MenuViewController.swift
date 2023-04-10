@@ -17,7 +17,8 @@ protocol MenuDisplayLogic: AnyObject {
 }
 
 class MenuViewController: UIViewController {
-    lazy var menuTableView: UITableView = {
+
+    private lazy var menuTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(ItemCell.self,
@@ -38,6 +39,8 @@ class MenuViewController: UIViewController {
 
     private var activityIndicator: UIActivityIndicatorView?
     private var rows: [ItemCellViewModelProtocol] = []
+
+    private lazy var header = CategoryCollectionTableViewHeader()
     
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -71,10 +74,9 @@ extension MenuViewController {
     private func setupNavigationBar() {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
-
         navBarAppearance.backgroundColor = .systemGray6
         let title = UIBarButtonItem(title: "Moscow")
-        let image = UIBarButtonItem(title: "Moscow", image: UIImage(systemName: "chevron.down"), target: self, action: #selector(switchCity))
+        let image = UIBarButtonItem(title: "", image: UIImage(systemName: "chevron.down"), target: self, action: #selector(switchCity))
         navigationItem.leftBarButtonItems = [title, image]
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
@@ -84,6 +86,7 @@ extension MenuViewController {
     @objc func switchCity() {
 
     }
+
     private func setupMainView() {
         view.backgroundColor = .systemGray6
     }
@@ -102,6 +105,7 @@ extension MenuViewController {
     }
 }
 
+// MARK: - UITableViewDataSource And UITableViewDelegate
 extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -121,7 +125,6 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
         case 0: return nil
         default:
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: CategoryCollectionTableViewHeader.identifier)
-
             return headerView
         }
     }

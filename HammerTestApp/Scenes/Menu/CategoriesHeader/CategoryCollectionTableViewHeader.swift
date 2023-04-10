@@ -9,16 +9,18 @@ import UIKit
 
 class CategoryCollectionTableViewHeader: UITableViewHeaderFooterView {
 
+    // MARK: - Identifier
+
     static let identifier = "CategoriesHeader"
 
-    let categories = Category.allCases
+    // MARK: - Private Properties
+    
+    private let categories = Category.allCases
 
-    private lazy var categoriesCollectionView: UICollectionView = {
+    lazy var categoriesCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 150, height: 50)
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +29,7 @@ class CategoryCollectionTableViewHeader: UITableViewHeaderFooterView {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .systemGray6
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
 
@@ -40,7 +43,10 @@ class CategoryCollectionTableViewHeader: UITableViewHeaderFooterView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
+// MARK: - Main View Setup
+extension CategoryCollectionTableViewHeader {
     private func setupView() {
         contentView.backgroundColor = .systemGray6
     }
@@ -59,6 +65,7 @@ class CategoryCollectionTableViewHeader: UITableViewHeaderFooterView {
     }
 }
 
+// MARK: - UICollectionViewDelegate And UICollectionViewDataSource
 extension CategoryCollectionTableViewHeader: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {

@@ -18,24 +18,6 @@
 		B8A695A729DB096300826460 /* MenuModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695A129DB096300826460 /* MenuModels.swift */; };
 		B8A695A829DB096300826460 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695A229DB096300826460 /* MenuViewController.swift */; };
 		B8A695A929DB096300826460 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695A329DB096300826460 /* MenuInteractor.swift */; };
-		B8A695B029DB097A00826460 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695AA29DB097A00826460 /* ContactsPresenter.swift */; };
-		B8A695B129DB097A00826460 /* ContactsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695AB29DB097A00826460 /* ContactsWorker.swift */; };
-		B8A695B229DB097A00826460 /* ContactsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695AC29DB097A00826460 /* ContactsRouter.swift */; };
-		B8A695B329DB097A00826460 /* ContactsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695AD29DB097A00826460 /* ContactsModels.swift */; };
-		B8A695B429DB097A00826460 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695AE29DB097A00826460 /* ContactsViewController.swift */; };
-		B8A695B529DB097A00826460 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695AF29DB097A00826460 /* ContactsInteractor.swift */; };
-		B8A695BC29DB099100826460 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695B629DB099100826460 /* ProfilePresenter.swift */; };
-		B8A695BD29DB099100826460 /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695B729DB099100826460 /* ProfileWorker.swift */; };
-		B8A695BE29DB099100826460 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695B829DB099100826460 /* ProfileRouter.swift */; };
-		B8A695BF29DB099100826460 /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695B929DB099100826460 /* ProfileModels.swift */; };
-		B8A695C029DB099100826460 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695BA29DB099100826460 /* ProfileViewController.swift */; };
-		B8A695C129DB099100826460 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695BB29DB099100826460 /* ProfileInteractor.swift */; };
-		B8A695C829DB099C00826460 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695C229DB099C00826460 /* CartPresenter.swift */; };
-		B8A695C929DB099C00826460 /* CartWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695C329DB099C00826460 /* CartWorker.swift */; };
-		B8A695CA29DB099C00826460 /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695C429DB099C00826460 /* CartRouter.swift */; };
-		B8A695CB29DB099C00826460 /* CartModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695C529DB099C00826460 /* CartModels.swift */; };
-		B8A695CC29DB099C00826460 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695C629DB099C00826460 /* CartViewController.swift */; };
-		B8A695CD29DB099C00826460 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695C729DB099C00826460 /* CartInteractor.swift */; };
 		B8A695F129DB7A7D00826460 /* ItemDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695EB29DB7A7D00826460 /* ItemDetailsPresenter.swift */; };
 		B8A695F229DB7A7D00826460 /* ItemDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695EC29DB7A7D00826460 /* ItemDetailsWorker.swift */; };
 		B8A695F329DB7A7D00826460 /* ItemDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A695ED29DB7A7D00826460 /* ItemDetailsRouter.swift */; };
@@ -57,6 +39,9 @@
 		B8A6961629E1CC1700826460 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6961529E1CC1600826460 /* Category.swift */; };
 		B8A6961D29E40C7500826460 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A6961C29E40C7500826460 /* main.png */; };
 		B8A6962129E40E1E00826460 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A6962029E40E1E00826460 /* category.png */; };
+		B8A6964329E4658700826460 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6964229E4658700826460 /* CartViewController.swift */; };
+		B8A6964529E465B100826460 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6964429E465B100826460 /* ProfileViewController.swift */; };
+		B8A6964729E465D200826460 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6964629E465D200826460 /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,24 +58,6 @@
 		B8A695A129DB096300826460 /* MenuModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModels.swift; sourceTree = "<group>"; };
 		B8A695A229DB096300826460 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B8A695A329DB096300826460 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
-		B8A695AA29DB097A00826460 /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
-		B8A695AB29DB097A00826460 /* ContactsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsWorker.swift; sourceTree = "<group>"; };
-		B8A695AC29DB097A00826460 /* ContactsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRouter.swift; sourceTree = "<group>"; };
-		B8A695AD29DB097A00826460 /* ContactsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsModels.swift; sourceTree = "<group>"; };
-		B8A695AE29DB097A00826460 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		B8A695AF29DB097A00826460 /* ContactsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
-		B8A695B629DB099100826460 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		B8A695B729DB099100826460 /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
-		B8A695B829DB099100826460 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
-		B8A695B929DB099100826460 /* ProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModels.swift; sourceTree = "<group>"; };
-		B8A695BA29DB099100826460 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B8A695BB29DB099100826460 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
-		B8A695C229DB099C00826460 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
-		B8A695C329DB099C00826460 /* CartWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartWorker.swift; sourceTree = "<group>"; };
-		B8A695C429DB099C00826460 /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
-		B8A695C529DB099C00826460 /* CartModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModels.swift; sourceTree = "<group>"; };
-		B8A695C629DB099C00826460 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		B8A695C729DB099C00826460 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
 		B8A695EB29DB7A7D00826460 /* ItemDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsPresenter.swift; sourceTree = "<group>"; };
 		B8A695EC29DB7A7D00826460 /* ItemDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsWorker.swift; sourceTree = "<group>"; };
 		B8A695ED29DB7A7D00826460 /* ItemDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsRouter.swift; sourceTree = "<group>"; };
@@ -112,6 +79,9 @@
 		B8A6961529E1CC1600826460 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B8A6961C29E40C7500826460 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		B8A6962029E40E1E00826460 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
+		B8A6964229E4658700826460 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		B8A6964429E465B100826460 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B8A6964629E465D200826460 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,12 +174,7 @@
 		B8A6957629DB079F00826460 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				B8A695AA29DB097A00826460 /* ContactsPresenter.swift */,
-				B8A695AB29DB097A00826460 /* ContactsWorker.swift */,
-				B8A695AC29DB097A00826460 /* ContactsRouter.swift */,
-				B8A695AD29DB097A00826460 /* ContactsModels.swift */,
-				B8A695AE29DB097A00826460 /* ContactsViewController.swift */,
-				B8A695AF29DB097A00826460 /* ContactsInteractor.swift */,
+				B8A6964629E465D200826460 /* ContactsViewController.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -229,12 +194,7 @@
 		B8A6958429DB085400826460 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B8A695B629DB099100826460 /* ProfilePresenter.swift */,
-				B8A695B729DB099100826460 /* ProfileWorker.swift */,
-				B8A695B829DB099100826460 /* ProfileRouter.swift */,
-				B8A695B929DB099100826460 /* ProfileModels.swift */,
-				B8A695BA29DB099100826460 /* ProfileViewController.swift */,
-				B8A695BB29DB099100826460 /* ProfileInteractor.swift */,
+				B8A6964429E465B100826460 /* ProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -242,12 +202,7 @@
 		B8A6959129DB090400826460 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				B8A695C229DB099C00826460 /* CartPresenter.swift */,
-				B8A695C329DB099C00826460 /* CartWorker.swift */,
-				B8A695C429DB099C00826460 /* CartRouter.swift */,
-				B8A695C529DB099C00826460 /* CartModels.swift */,
-				B8A695C629DB099C00826460 /* CartViewController.swift */,
-				B8A695C729DB099C00826460 /* CartInteractor.swift */,
+				B8A6964229E4658700826460 /* CartViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -396,52 +351,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8A695BE29DB099100826460 /* ProfileRouter.swift in Sources */,
-				B8A695B329DB097A00826460 /* ContactsModels.swift in Sources */,
 				B8A6961429E04BE600826460 /* Banner.swift in Sources */,
-				B8A695B129DB097A00826460 /* ContactsWorker.swift in Sources */,
 				B8A695FF29DC1DC800826460 /* ImageManager.swift in Sources */,
 				B8A695FA29DB854200826460 /* Item.swift in Sources */,
-				B8A695BF29DB099100826460 /* ProfileModels.swift in Sources */,
+				B8A6964329E4658700826460 /* CartViewController.swift in Sources */,
+				B8A6964529E465B100826460 /* ProfileViewController.swift in Sources */,
 				B8A695A629DB096300826460 /* MenuRouter.swift in Sources */,
-				B8A695C829DB099C00826460 /* CartPresenter.swift in Sources */,
-				B8A695C929DB099C00826460 /* CartWorker.swift in Sources */,
 				B8A6960529DC645200826460 /* MenuConfigurator.swift in Sources */,
 				B8A695F629DB7A7D00826460 /* ItemDetailsInteractor.swift in Sources */,
 				B8A695F829DB7FF000826460 /* ItemDetailsConfigurator.swift in Sources */,
 				B8A6954D29DA1E0A00826460 /* AppDelegate.swift in Sources */,
 				B8A695A529DB096300826460 /* MenuWorker.swift in Sources */,
-				B8A695CA29DB099C00826460 /* CartRouter.swift in Sources */,
 				B8A695A829DB096300826460 /* MenuViewController.swift in Sources */,
-				B8A695BD29DB099100826460 /* ProfileWorker.swift in Sources */,
 				B8A6960B29DF5FDF00826460 /* CategoryCollectionTableViewHeader.swift in Sources */,
-				B8A695C129DB099100826460 /* ProfileInteractor.swift in Sources */,
 				B8A695A929DB096300826460 /* MenuInteractor.swift in Sources */,
 				B8A695F129DB7A7D00826460 /* ItemDetailsPresenter.swift in Sources */,
-				B8A695CB29DB099C00826460 /* CartModels.swift in Sources */,
 				B8A6960129DC37C100826460 /* Constants.swift in Sources */,
-				B8A695B229DB097A00826460 /* ContactsRouter.swift in Sources */,
 				B8A695FD29DC1DAC00826460 /* NetworkManager.swift in Sources */,
 				B8A695A729DB096300826460 /* MenuModels.swift in Sources */,
 				B8A695F529DB7A7D00826460 /* ItemDetailsViewController.swift in Sources */,
 				B8A6960F29E0302C00826460 /* BannerTableViewCell.swift in Sources */,
 				B8A695F429DB7A7D00826460 /* ItemDetailsModels.swift in Sources */,
 				B8A6960329DC5F5E00826460 /* ItemCell.swift in Sources */,
-				B8A695BC29DB099100826460 /* ProfilePresenter.swift in Sources */,
-				B8A695B029DB097A00826460 /* ContactsPresenter.swift in Sources */,
-				B8A695CD29DB099C00826460 /* CartInteractor.swift in Sources */,
 				B8A6956729DAFCC000826460 /* TabBarController.swift in Sources */,
 				B8A6961229E0479300826460 /* BannerCollectionViewCell.swift in Sources */,
 				B8A695A429DB096300826460 /* MenuPresenter.swift in Sources */,
 				B8A6961629E1CC1700826460 /* Category.swift in Sources */,
-				B8A695B529DB097A00826460 /* ContactsInteractor.swift in Sources */,
 				B8A695F229DB7A7D00826460 /* ItemDetailsWorker.swift in Sources */,
-				B8A695C029DB099100826460 /* ProfileViewController.swift in Sources */,
 				B8A6954F29DA1E0A00826460 /* SceneDelegate.swift in Sources */,
-				B8A695CC29DB099C00826460 /* CartViewController.swift in Sources */,
-				B8A695B429DB097A00826460 /* ContactsViewController.swift in Sources */,
 				B8A6960D29E0268B00826460 /* CategoryCollectionViewCell.swift in Sources */,
 				B8A695F329DB7A7D00826460 /* ItemDetailsRouter.swift in Sources */,
+				B8A6964729E465D200826460 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,7 +45,7 @@ extension BannerCollectionViewCell {
         NSLayoutConstraint.activate([
             bannerImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             bannerImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            bannerImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            bannerImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             bannerImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }

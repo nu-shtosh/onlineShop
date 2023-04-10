@@ -54,7 +54,7 @@ class ItemCell: UITableViewCell, CellModelRepresentable {
         button.setTitleColor(UIColor(named: "customRed"), for: .normal)
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor(named: "customRed")?.cgColor
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 6
         return button
     }()
 
@@ -79,7 +79,6 @@ class ItemCell: UITableViewCell, CellModelRepresentable {
                 print(error.localizedDescription)
             }
         }
-
         itemTitleLabel.text = viewModel.itemName
         itemDescriptionLabel.text = viewModel.itemDescription
         itemPriceButton.setTitle("от \(viewModel.itemPrice)$", for: .normal)

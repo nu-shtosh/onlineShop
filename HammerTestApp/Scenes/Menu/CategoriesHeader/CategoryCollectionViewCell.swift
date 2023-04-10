@@ -21,10 +21,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         button.contentScaleFactor = .leastNormalMagnitude
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor(named: "customRed")?.cgColor
-        button.layer.cornerRadius = 16
-        button.addTarget(self,
-                         action: #selector(switchCategory),
-                         for: .touchUpInside)
+        button.layer.cornerRadius = 18
         return button
     }()
 
@@ -36,9 +33,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    @objc func switchCategory() {
     }
 }
 

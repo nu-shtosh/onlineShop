@@ -9,13 +9,19 @@ import UIKit
 
 class BannerTableViewCell: UITableViewCell {
 
+    // MARK: - Identifier
+
     static let identifier = "BannerTableViewCell"
 
-    var banners = Banner.getDefaultBanners()
+    // MARK: - Private Properties
+
+    private lazy var banners = Banner.getDefaultBanners()
+
+    // MARK: - UI Elements
 
     private lazy var bannersCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 300, height: 100)
+        layout.itemSize = CGSize(width: 280, height: 100)
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: layout)
@@ -24,9 +30,12 @@ class BannerTableViewCell: UITableViewCell {
         collectionView.register(BannerCollectionViewCell.self,
                                 forCellWithReuseIdentifier: BannerCollectionViewCell.identifier)
         collectionView.dataSource = self
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         return collectionView
     }()
+
+    // MARK: - Setup View
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -34,7 +43,10 @@ class BannerTableViewCell: UITableViewCell {
         addSubviews()
         setupConstraints()
     }
+}
 
+// MARK: - Main View Setup
+extension BannerTableViewCell {
     private func setupView() {
         contentView.backgroundColor = .systemGray6
     }
@@ -53,6 +65,7 @@ class BannerTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - UICollectionViewDelegate And UICollectionViewDataSource
 extension BannerTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
