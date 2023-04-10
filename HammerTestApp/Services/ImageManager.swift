@@ -31,41 +31,4 @@ final class ImageManager {
             }
         }
     }
-    
-    func fetchImageData(from url: URL?) -> Data? {
-        guard let url = url else {
-            print(NetworkError.invalidURL.rawValue)
-            return nil
-        }
-        guard let imageData = try? Data(contentsOf: url) else {
-            print(NetworkError.noData.rawValue)
-            return nil
-        }
-        return imageData
-    }
-
-    func fetchWithURLSession(from url: URL?) -> Data? {
-        var data: Data?
-        guard let url = url else {
-            print(NetworkError.invalidURL.rawValue)
-            return nil
-        }
-        URLSession(configuration: .default).dataTask(with: url) { (imageData, response, error) in
-            if let error {
-                print("Error downloading cat picture: \(error)")
-            } else {
-                if let response = response as? HTTPURLResponse {
-                    print("Response code \(response.statusCode)")
-                    if let imageData = imageData {
-                        data = imageData
-                    } else {
-                        print("Couldn't get image: Image is nil")
-                    }
-                } else {
-                    print("Couldn't get response code for some reason")
-                }
-            }
-        }.resume()
-        return data
-    }
 }

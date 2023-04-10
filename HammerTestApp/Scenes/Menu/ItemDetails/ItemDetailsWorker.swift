@@ -12,8 +12,4 @@
 
 import Foundation
 
-class ItemDetailsWorker {
-    func getImage(from imageURL: URL?) -> Data? {
-        ImageManager.shared.fetchWithURLSession(from: imageURL)
-    }
-}
+class ItemDetailsWorker { }
