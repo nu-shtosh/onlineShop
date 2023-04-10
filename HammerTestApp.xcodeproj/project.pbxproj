@@ -55,6 +55,7 @@
 		B8A6961229E0479300826460 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6961129E0479300826460 /* BannerCollectionViewCell.swift */; };
 		B8A6961429E04BE600826460 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6961329E04BE600826460 /* Banner.swift */; };
 		B8A6961629E1CC1700826460 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A6961529E1CC1600826460 /* Category.swift */; };
+		B8A6961D29E40C7500826460 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A6961C29E40C7500826460 /* main.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		B8A6961129E0479300826460 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8A6961329E04BE600826460 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		B8A6961529E1CC1600826460 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B8A6961C29E40C7500826460 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		B8A6954029DA1E0A00826460 = {
 			isa = PBXGroup;
 			children = (
+				B8A6961B29E40BF100826460 /* Screens */,
 				B8A6954B29DA1E0A00826460 /* HammerTestApp */,
 				B8A6954A29DA1E0A00826460 /* Products */,
 			);
@@ -305,6 +308,14 @@
 			path = BannersCell;
 			sourceTree = "<group>";
 		};
+		B8A6961B29E40BF100826460 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B8A6961C29E40C7500826460 /* main.png */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,6 +381,7 @@
 			files = (
 				B8A6955929DA1E0B00826460 /* LaunchScreen.storyboard in Resources */,
 				B8A6955629DA1E0B00826460 /* Assets.xcassets in Resources */,
+				B8A6961D29E40C7500826460 /* main.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
