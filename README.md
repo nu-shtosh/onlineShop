@@ -16,5 +16,6 @@
 <div align="left">
 
   <img src="https://github.com/nu-shtosh/onlineShop/blob/main/Screens/main.png" width="200"/>
+  <img src="https://github.com/nu-shtosh/onlineShop/blob/main/Screens/category.png" width="200"/>
 
 </div>
