@@ -40,8 +40,9 @@ class MenuViewController: UIViewController {
     private var activityIndicator: UIActivityIndicatorView?
     private var rows: [ItemCellViewModelProtocol] = []
 
-    private lazy var header = CategoryCollectionTableViewHeader()
-    
+    private let header = CategoryCollectionTableViewHeader()
+    let currentCategory: Category = .all
+
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +147,16 @@ extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
             }
             return cell
         }
+    }
+
+    func addCategoryButtonGestureRecognizers() {
+        for button in header.categoriesStackView.arrangedSubviews {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(categoryButtonSelected(sender: )))
+            button.addGestureRecognizer(gesture)
+        }
+    }
+
+    @objc func categoryButtonSelected(sender: UITapGestureRecognizer) {
     }
 
     func tableView(_ tableView: UITableView,

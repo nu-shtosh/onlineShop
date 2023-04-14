@@ -14,23 +14,28 @@ class CategoryCollectionTableViewHeader: UITableViewHeaderFooterView {
     static let identifier = "CategoriesHeader"
 
     // MARK: - Private Properties
-    
-    private let categories = Category.allCases
 
-    lazy var categoriesCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 150, height: 50)
-        layout.scrollDirection = .horizontal
-        let collectionView = UICollectionView(frame: .zero,
-                                              collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(CategoryCollectionViewCell.self,
-                                forCellWithReuseIdentifier: CategoryCollectionViewCell.identifier)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.backgroundColor = .systemGray6
-        collectionView.showsHorizontalScrollIndicator = false
-        return collectionView
+    let categories = Category.allCases
+
+    private lazy var categoriesScrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.contentSize = CGSize(
+            width: UIScreen.main.bounds.width + 280,
+            height: .zero
+        )
+        scrollView.showsHorizontalScrollIndicator = false
+        return scrollView
+    }()
+
+    lazy var categoriesStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        stackView.distribution = .fillEqually
+        return stackView
     }()
 
     override init(reuseIdentifier: String?) {
@@ -43,6 +48,22 @@ class CategoryCollectionTableViewHeader: UITableViewHeaderFooterView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    func selectButton(button: UIButton) {
+        guard let buttons = categoriesStackView.arrangedSubviews as? [UIButton] else { return }
+        for button in buttons {
+            setNormal(button: button)
+        }
+        setSelected(button: button)
+    }
+
+    func setSelected(button: UIButton) {
+        button.backgroundColor = UIColor(named: "customPink")
+    }
+
+    func setNormal(button: UIButton) {
+        button.backgroundColor = .clear
+    }
 }
 
 // MARK: - Main View Setup
@@ -52,32 +73,37 @@ extension CategoryCollectionTableViewHeader {
     }
 
     private func addSubviews() {
-        contentView.addSubview(categoriesCollectionView)
+        addSubview(categoriesScrollView)
+        categoriesScrollView.addSubview(categoriesStackView)
+        addButtons()
+    }
+
+    private func addButtons() {
+        for category in Category.allCases {
+            let button = UIButton(type: .roundedRect)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            button.setTitleColor(UIColor(named: "customRed"), for: .normal)
+            button.contentScaleFactor = .leastNormalMagnitude
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor(named: "customRed")?.cgColor
+            button.layer.cornerRadius = 12
+            button.setTitle(category.rawValue.capitalized, for: .normal)
+            button.widthAnchor.constraint(equalToConstant: 120).isActive = true
+            categoriesStackView.addArrangedSubview(button)
+        }
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            categoriesCollectionView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
-            categoriesCollectionView.leadingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leadingAnchor),
-            categoriesCollectionView.trailingAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.trailingAnchor),
-            categoriesCollectionView.bottomAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.bottomAnchor)
+            categoriesScrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            categoriesScrollView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            categoriesScrollView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            categoriesScrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+
+            categoriesStackView.leadingAnchor.constraint(equalTo: categoriesScrollView.leadingAnchor, constant: 16),
+            categoriesStackView.trailingAnchor.constraint(equalTo: categoriesScrollView.trailingAnchor, constant: -16),
+            categoriesStackView.centerYAnchor.constraint(equalTo: categoriesScrollView.centerYAnchor)
         ])
-    }
-}
-
-// MARK: - UICollectionViewDelegate And UICollectionViewDataSource
-extension CategoryCollectionTableViewHeader: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView,
-                        numberOfItemsInSection section: Int) -> Int {
-        categories.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionViewCell.identifier,
-                                                      for: indexPath) as! CategoryCollectionViewCell
-        let category = categories[indexPath.item]
-        cell.updateView(with: category)
-        return cell
     }
 }

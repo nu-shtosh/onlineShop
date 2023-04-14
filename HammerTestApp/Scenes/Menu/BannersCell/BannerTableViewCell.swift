@@ -10,15 +10,12 @@ import UIKit
 class BannerTableViewCell: UITableViewCell {
 
     // MARK: - Identifier
-
     static let identifier = "BannerTableViewCell"
 
     // MARK: - Private Properties
-
     private lazy var banners = Banner.getDefaultBanners()
 
     // MARK: - UI Elements
-
     private lazy var bannersCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 280, height: 100)
@@ -36,7 +33,6 @@ class BannerTableViewCell: UITableViewCell {
     }()
 
     // MARK: - Setup View
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         setupView()
